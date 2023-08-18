@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Local Paging Consultation</title>
+  <link rel="stylesheet" href="acad_head.css" />
+  <!-- Font Awesome Cdn Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+  <style>
+    /* Style for the dialog box */
+    .dialog-box {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgb(251, 255, 0);
+      padding: 20px;
+      border: 1px solid #000000;
+      box-shadow: 0 4px 6px rgba(116, 115, 115, 0.1);
+    }
+        /* Add a new class for the card container */
+        .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    /* Style for each card */
+    .card {
+      width: calc(12.5% - 20px); /* 8 columns with margin between cards */
+      margin-bottom: 20px;
+      /* Your existing card styles */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <ul>
+        <li><a href="#" class="logo">
+          <img src="./STI LOGO.png">
+          <span class="nav-item">Paging System</span>
+        </a></li>
+        <li><a href="ICT-ENGG Department.html">
+          <span class="nav-item">ICT-ENG'G Department</span>
+        </a></li>
+        <li><a href="DBAA Department.html">
+          <span class="nav-item">DBAA Department</span>
+        </a></li>
+        <li><a href="GE and BACOMM Department.html">
+          <span class="nav-item">GE and BACOMM Department</span>
+        </a></li>
+        <li><a href="THM Department.html">
+          <span class="nav-item">THM Department</span>
+        </a></li>
+        <li><a href="SHS Department.html">
+          <span class="nav-item">SHS Department</span>
+        </a></li>
+
+        <li><a href="#" class="logout">
+          <i class="fas fa-sign-out-alt"></i>
+          <span class="nav-item">Log out</span>
+        </a></li>
+      </ul>
+    </nav>
+
+    <section class="main">
+      <div class="main-top">
+        <h1>GE and BACOMM Department Consultation Hours</h1>
+        <i class="fas fa-user-cog"></i>
+      </div>
+      <div class="users">
+        <div class="users">
+            <div class="card-container">
+        <!-- ICT-ENGG Department Consultation Hours (PAGING SOUNDS) -->
+        <div class="card">
+          <img src="ALL DEPARTMENTS PICTURES\GE and BACOMM Department Consultation Hours (PICTURES)\Judy Ann Alvez.png">
+          <h4>Judy Ann Alvez</h4>
+          <p>GE and BACOMM DEPARTMENT</p>
+          <div class="per">
+            <audio id="alvezAudio"> 
+              <source src="ALL DEPARTMENTS PAGING SOUNDS\GE and BACOMM Department Consultation Hours (PAGING SOUNDS)\Paging for Ms. Judy Ann Alvez.m4a">
+            </audio>
+            <button id="alvezButton" type="button" onclick="pageProfessor('alvez')">Page</button>
+            <!-- Dialog box code -->
+            <div id="alvezDialogBox" class="dialog-box">
+              <p>You've reached the maximum attempts for this professor.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <img src="ALL DEPARTMENTS PICTURES\GE and BACOMM Department Consultation Hours (PICTURES)\Joemar Antonio.png">
+          <h4>Joemar Antonio</h4>
+          <p>GE and BACOMM DEPARTMENT</p>
+          <div class="per">
+            <audio id="antonioAudio"> 
+              <source src="ALL DEPARTMENTS PAGING SOUNDS\GE and BACOMM Department Consultation Hours (PAGING SOUNDS)\Paging for Mr. Joemar P. Antonio.m4a">
+            </audio>
+            <button id="antonioButton" type="button" onclick="pageProfessor('antonio')">Page</button>
+            <!-- Dialog box code -->
+            <div id="antonioDialogBox" class="dialog-box">
+              <p>You've reached the maximum attempts for this professor.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="ALL DEPARTMENTS PICTURES\GE and BACOMM Department Consultation Hours (PICTURES)\Roseliann Benidez.png">
+          <h4>Roseliann Benidez</h4>
+          <p>GE and BACOMM DEPARTMENT</p>
+          <div class="per">
+            <audio id="benidezAudio"> 
+              <source src="ALL DEPARTMENTS PAGING SOUNDS\GE and BACOMM Department Consultation Hours (PAGING SOUNDS)\Paging for Ms. Roseliann Benidez.m4a">
+            </audio>
+            <button id="benidezButton" type="button" onclick="pageProfessor('benidez')">Page</button>
+            <!-- Dialog box code -->
+            <div id="benidezDialogBox" class="dialog-box">
+              <p>You've reached the maximum attempts for this professor.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="ALL DEPARTMENTS PICTURES\GE and BACOMM Department Consultation Hours (PICTURES)\Kevyn Brondial.png">
+          <h4>Kevyn Brondial</h4>
+          <p>GE and BACOMM DEPARTMENT</p>
+          <div class="per">
+            <audio id="brondialAudio"> 
+              <source src="ALL DEPARTMENTS PAGING SOUNDS\GE and BACOMM Department Consultation Hours (PAGING SOUNDS)\Paging for Ms. Kevyn Brondial.m4a">
+            </audio>
+            <button id="brondialButton" type="button" onclick="pageProfessor('brondial')">Page</button>
+            <!-- Dialog box code -->
+            <div id="brondialDialogBox" class="dialog-box">
+              <p>You've reached the maximum attempts for this professor.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="ALL DEPARTMENTS PICTURES\GE and BACOMM Department Consultation Hours (PICTURES)\Ruben Jay Caduyac.png">
+          <h4>Ruben Jay Caduyac</h4>
+          <p>GE and BACOMM DEPARTMENT</p>
+          <div class="per">
+            <audio id="caduyacAudio"> 
+              <source src="ALL DEPARTMENTS PAGING SOUNDS\GE and BACOMM Department Consultation Hours (PAGING SOUNDS)\Paging for Mr. Ruben Jay B. Caduyac.m4a">
+            </audio>
+            <button id="caduyacButton" type="button" onclick="pageProfessor('caduyac')">Page</button>
+            <!-- Dialog box code -->
+            <div id="caduyacDialogBox" class="dialog-box">
+              <p>You've reached the maximum attempts for this professor.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="ALL DEPARTMENTS PICTURES\GE and BACOMM Department Consultation Hours (PICTURES)\Madel Aubrey Caratao.png">
+          <h4>Madel Aubrey Caratao</h4>
+          <p>GE and BACOMM DEPARTMENT</p>
+          <div class="per">
+            <audio id="carataoAudio"> 
+              <source src="ALL DEPARTMENTS PAGING SOUNDS\GE and BACOMM Department Consultation Hours (PAGING SOUNDS)\Paging for Ms. Madel Aubrey Caratao.m4a">
+            </audio>
+            <button id="carataoButton" type="button" onclick="pageProfessor('caratao')">Page</button>
+            <!-- Dialog box code -->
+            <div id="carataoDialogBox" class="dialog-box">
+              <p>You've reached the maximum attempts for this professor.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="ALL DEPARTMENTS PICTURES\GE and BACOMM Department Consultation Hours (PICTURES)\Jeza Dela Cruz.png">
+          <h4>Jeza Dela Cruz</h4>
+          <p>GE and BACOMM DEPARTMENT</p>
+          <div class="per">
+            <audio id="delacruzAudio"> 
+              <source src="ALL DEPARTMENTS PAGING SOUNDS\GE and BACOMM Department Consultation Hours (PAGING SOUNDS)\Paging for Ms. Jeza C. Dela Cruz.m4a">
+            </audio>
+            <button id="delacruzButton" type="button" onclick="pageProfessor('delacruz')">Page</button>
+            <!-- Dialog box code -->
+            <div id="delacruzDialogBox" class="dialog-box">
+              <p>You've reached the maximum attempts for this professor.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="ALL DEPARTMENTS PICTURES\GE and BACOMM Department Consultation Hours (PICTURES)\Fretzie Juls Delos Reyes.png">
+          <h4>Fretzie Juls Delos Reyes</h4>
+          <p>GE and BACOMM DEPARTMENT</p>
+          <div class="per">
+            <audio id="delosreyesAudio"> 
+              <source src="ALL DEPARTMENTS PAGING SOUNDS\GE and BACOMM Department Consultation Hours (PAGING SOUNDS)\Paging for Ms. Fretzie Juls Delos Reyes.m4a">
+            </audio>
+            <button id="delosreyesButton" type="button" onclick="pageProfessor('delosreyes')">Page</button>
+            <!-- Dialog box code -->
+            <div id="delosreyesDialogBox" class="dialog-box">
+              <p>You've reached the maximum attempts for this professor.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+            <img src="ALL DEPARTMENTS PICTURES\GE and BACOMM Department Consultation Hours (PICTURES)\Jalen Rein Delos Santos.png">
+            <h4>Jalen Rein Delos Santos</h4>
+            <p>GE and BACOMM DEPARTMENT</p>
+            <div class="per">
+              <audio id="delossantosAudio"> 
+                <source src="ALL DEPARTMENTS PAGING SOUNDS\GE and BACOMM Department Consultation Hours (PAGING SOUNDS)\Paging for Mr. Jalen Rein Delos Santos.m4a">
+              </audio>
+              <button id="delossantosButton" type="button" onclick="pageProfessor('delossantos')">Page</button>
+              <!-- Dialog box code -->
+              <div id="delossantosDialogBox" class="dialog-box">
+                <p>You've reached the maximum attempts for this professor.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="ALL DEPARTMENTS PICTURES\GE and BACOMM Department Consultation Hours (PICTURES)\Jonah Camille Espiridion.png">
+            <h4>Jonah Camille Espiridion</h4>
+            <p>GE and BACOMM DEPARTMENT</p>
+            <div class="per">
+              <audio id="espiridionAudio"> 
+                <source src="ALL DEPARTMENTS PAGING SOUNDS\GE and BACOMM Department Consultation Hours (PAGING SOUNDS)\Paging for Ms. Jonah Camille Espiridion.m4a">
+              </audio>
+              <button id="espiridionButton" type="button" onclick="pageProfessor('espiridion')">Page</button>
+              <!-- Dialog box code -->
+              <div id="espiridionDialogBox" class="dialog-box">
+                <p>You've reached the maximum attempts for this professor.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="ALL DEPARTMENTS PICTURES\GE and BACOMM Department Consultation Hours (PICTURES)\Floriv Villalobos.png">
+            <h4>Floriv Villalobos</h4>
+            <p>GE and BACOMM DEPARTMENT</p>
+            <div class="per">
+              <audio id="villalobosAudio"> 
+                <source src="ALL DEPARTMENTS PAGING SOUNDS\GE and BACOMM Department Consultation Hours (PAGING SOUNDS)\Paging for Mr. Floriv Villalobos.m4a">
+              </audio>
+              <button id="villalobosButton" type="button" onclick="pageProfessor('villalobos')">Page</button>
+              <!-- Dialog box code -->
+              <div id="villalobosDialogBox" class="dialog-box">
+                <p>You've reached the maximum attempts for this professor.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="ALL DEPARTMENTS PICTURES\GE and BACOMM Department Consultation Hours (PICTURES)\Aram Librorania.png">
+            <h4>Aram Librorania</h4>
+            <p>GE and BACOMM DEPARTMENT</p>
+            <div class="per">
+              <audio id="libroraniaAudio"> 
+                <source src="ALL DEPARTMENTS PAGING SOUNDS\GE and BACOMM Department Consultation Hours (PAGING SOUNDS)\Paging for Mr. Aram S. Librorania.m4a">
+              </audio>
+              <button id="libroraniaButton" type="button" onclick="pageProfessor('librorania')">Page</button>
+              <!-- Dialog box code -->
+              <div id="libroraniaDialogBox" class="dialog-box">
+                <p>You've reached the maximum attempts for this professor.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="ALL DEPARTMENTS PICTURES\GE and BACOMM Department Consultation Hours (PICTURES)\Eulah Mae Medrano.png">
+            <h4>Eulah Mae Medrano</h4>
+            <p>GE and BACOMM DEPARTMENT</p>
+            <div class="per">
+              <audio id="medranoAudio"> 
+                <source src="ALL DEPARTMENTS PAGING SOUNDS\GE and BACOMM Department Consultation Hours (PAGING SOUNDS)\Paging for Ms. Eulah Mae B. Medrano.m4a">
+              </audio>
+              <button id="medranoButton" type="button" onclick="pageProfessor('medrano')">Page</button>
+              <!-- Dialog box code -->
+              <div id="medranoDialogBox" class="dialog-box">
+                <p>You've reached the maximum attempts for this professor.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="ALL DEPARTMENTS PICTURES\GE and BACOMM Department Consultation Hours (PICTURES)\Fretzie Juls Delos Reyes.png">
+            <h4>Fretzie Juls Delos Reyes</h4>
+            <p>GE and BACOMM DEPARTMENT</p>
+            <div class="per">
+              <audio id="delosreyesAudio"> 
+                <source src="ALL DEPARTMENTS PAGING SOUNDS\GE and BACOMM Department Consultation Hours (PAGING SOUNDS)\Paging for Ms. Fretzie Juls Delos Reyes.m4a">
+              </audio>
+              <button id="delosreyesButton" type="button" onclick="pageProfessor('delosreyes')">Page</button>
+              <!-- Dialog box code -->
+              <div id="delosreyesDialogBox" class="dialog-box">
+                <p>You've reached the maximum attempts for this professor.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="ALL DEPARTMENTS PICTURES\GE and BACOMM Department Consultation Hours (PICTURES)\Mariemel Oyao.png">
+            <h4>Mariemel Oyao</h4>
+            <p>GE and BACOMM DEPARTMENT</p>
+            <div class="per">
+              <audio id="oyaoAudio"> 
+                <source src="ALL DEPARTMENTS PAGING SOUNDS\GE and BACOMM Department Consultation Hours (PAGING SOUNDS)\Paging for Ms. Mariemel Oyao.m4a">
+              </audio>
+              <button id="oyaoButton" type="button" onclick="pageProfessor('oyao')">Page</button>
+              <!-- Dialog box code -->
+              <div id="oyaoDialogBox" class="dialog-box">
+                <p>You've reached the maximum attempts for this professor.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="ALL DEPARTMENTS PICTURES\GE and BACOMM Department Consultation Hours (PICTURES)\Gerald Paras.png">
+            <h4>Gerald Paras</h4>
+            <p>GE and BACOMM DEPARTMENT</p>
+            <div class="per">
+              <audio id="parasAudio"> 
+                <source src="ALL DEPARTMENTS PAGING SOUNDS\GE and BACOMM Department Consultation Hours (PAGING SOUNDS)\Paging for Mr. Gerald Paras.m4a">
+              </audio>
+              <button id="parasButton" type="button" onclick="pageProfessor('paras')">Page</button>
+              <!-- Dialog box code -->
+              <div id="parasDialogBox" class="dialog-box">
+                <p>You've reached the maximum attempts for this professor.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="ALL DEPARTMENTS PICTURES\GE and BACOMM Department Consultation Hours (PICTURES)\Christopher Ivan Salamida.png">
+            <h4>Christopher Ivan Salamida</h4>
+            <p>GE and BACOMM DEPARTMENT</p>
+            <div class="per">
+              <audio id="salamidaAudio"> 
+                <source src="ALL DEPARTMENTS PAGING SOUNDS\GE and BACOMM Department Consultation Hours (PAGING SOUNDS)\Paging for Mr. Christopher Ivan Salamida.m4a">
+              </audio>
+              <button id="salamidaButton" type="button" onclick="pageProfessor('salamida')">Page</button>
+              <!-- Dialog box code -->
+              <div id="salamidaDialogBox" class="dialog-box">
+                <p>You've reached the maximum attempts for this professor.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="ALL DEPARTMENTS PICTURES\GE and BACOMM Department Consultation Hours (PICTURES)\Julie Ann Solis.png">
+            <h4>Julie Ann Solis</h4>
+            <p>GE and BACOMM DEPARTMENT</p>
+            <div class="per">
+              <audio id="solisAudio"> 
+                <source src="ALL DEPARTMENTS PAGING SOUNDS\GE and BACOMM Department Consultation Hours (PAGING SOUNDS)\Paging for Ms. Julie Ann Solis.m4a">
+              </audio>
+              <button id="solisButton" type="button" onclick="pageProfessor('solis')">Page</button>
+              <!-- Dialog box code -->
+              <div id="solisDialogBox" class="dialog-box">
+                <p>You've reached the maximum attempts for this professor.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="ALL DEPARTMENTS PICTURES\GE and BACOMM Department Consultation Hours (PICTURES)\Judah Tarroza.png">
+            <h4>Judah Tarroza</h4>
+            <p>GE and BACOMM DEPARTMENT</p>
+            <div class="per">
+              <audio id="tarrozaAudio"> 
+                <source src="ALL DEPARTMENTS PAGING SOUNDS\GE and BACOMM Department Consultation Hours (PAGING SOUNDS)\Paging for Mr. Christopher Ivan Salamida.m4a">
+              </audio>
+              <button id="tarrozaButton" type="button" onclick="pageProfessor('tarroza')">Page</button>
+              <!-- Dialog box code -->
+              <div id="tarrozaDialogBox" class="dialog-box">
+                <p>You've reached the maximum attempts for this professor.</p>
+              </div>
+            </div>
+          </div>
+        
+        <script>
+          var attempts = {}; // Using an object to store attempts for each professor
+          var maxAttempts = 3;
+          var intervalIds = {}; // Using an object to store interval IDs for each professor
+        
+          function playAudio(audioElement) {
+            audioElement.play();
+          }
+        
+          function showDialogBox(dialogBox) {
+            dialogBox.style.display = "block";
+            setTimeout(function() {
+              dialogBox.style.display = "none";
+            }, 3000); // Hide the dialog box after 3 seconds
+          }
+        
+          function pageProfessor(professor) {
+            if (!attempts[professor]) {
+              attempts[professor] = 0;
+            }
+        
+            if (attempts[professor] >= maxAttempts) {
+              clearInterval(intervalIds[professor]);
+              document.getElementById(professor + 'Button').disabled = true;
+              showDialogBox(document.getElementById(professor + 'DialogBox'));
+              return;
+            }
+        
+            var audioElement = document.getElementById(professor + 'Audio');
+            playAudio(audioElement);
+            attempts[professor]++;
+        
+            // Disable the button temporarily and set an interval to enable it again
+            document.getElementById(professor + 'Button').disabled = true;
+            intervalIds[professor] = setInterval(function() {
+              document.getElementById(professor + 'Button').disabled = false;
+              clearInterval(intervalIds[professor]);
+            }, 5000); // Enable button after 5 seconds
+          }
+        </script>
+</tbody>
+</html>

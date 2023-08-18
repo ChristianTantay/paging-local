@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Local Paging Consultation</title>
+  <link rel="stylesheet" href="acad_head.css" />
+  <!-- Font Awesome Cdn Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+  <style>
+    /* Style for the dialog box */
+    .dialog-box {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgb(251, 255, 0);
+      padding: 20px;
+      border: 1px solid #000000;
+      box-shadow: 0 4px 6px rgba(116, 115, 115, 0.1);
+    }
+        /* Add a new class for the card container */
+        .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    /* Style for each card */
+    .card {
+      width: calc(12.5% - 20px); /* 8 columns with margin between cards */
+      margin-bottom: 20px;
+      /* Your existing card styles */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <ul>
+        <li><a href="#" class="logo">
+          <img src="./STI LOGO.png">
+          <span class="nav-item">Paging System</span>
+        </a></li>
+        <li><a href="ICT-ENGG Department.html">
+          <span class="nav-item">ICT-ENG'G Department</span>
+        </a></li>
+        <li><a href="DBAA Department.html">
+          <span class="nav-item">DBAA Department</span>
+        </a></li>
+        <li><a href="GE and BACOMM Department.html">
+          <span class="nav-item">GE and BACOMM Department</span>
+        </a></li>
+        <li><a href="THM Department.html">
+          <span class="nav-item">THM Department</span>
+        </a></li>
+        <li><a href="SHS Department.html">
+          <span class="nav-item">SHS Department</span>
+        </a></li>
+
+        <li><a href="#" class="logout">
+          <i class="fas fa-sign-out-alt"></i>
+          <span class="nav-item">Log out</span>
+        </a></li>
+      </ul>
+    </nav>
+
+    <section class="main">
+      <div class="main-top">
+        <h1>SHS Consultation Hours</h1>
+        <i class="fas fa-user-cog"></i>
+      </div>
+      <div class="users">
+        <div class="users">
+            <div class="card-container">
+        <!-- ICT-ENGG Department Consultation Hours (PAGING SOUNDS) -->
+        <div class="card">
+          <img src="ALL DEPARTMENTS PICTURES\SHS Department Consultation Hours (PICTURES)\Sonny Calinawan Abadiano.png">
+          <h4>Sonny Calinawan Abadiano</h4>
+          <p>SHS DEPARTMENT</p>
+          <div class="per">
+            <audio id="abadianoAudio"> 
+              <source src="C:\Users\tanta\Desktop\Academic Head\Academic Head\ALL DEPARTMENTS PAGING SOUNDS\SHS Department Consultation Hours (PAGING SOUNDS)\Mr. Sonny Calinawan Abadiano.m4a">
+            </audio>
+            <button id="abadianoButton" type="button" onclick="pageProfessor('abadiano')">Page</button>
+            <!-- Dialog box code -->
+            <div id="abadianoDialogBox" class="dialog-box">
+              <p>You've reached the maximum attempts for this professor.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <img src="ALL DEPARTMENTS PICTURES\SHS Department Consultation Hours (PICTURES)\Samantha Felicia Alvarez.png">
+          <h4>Samantha Felicia Alvarez</h4>
+          <p>SHS DEPARTMENT</p>
+          <div class="per">
+            <audio id="alvarezAudio"> 
+              <source src="ALL DEPARTMENTS PAGING SOUNDS\SHS Department Consultation Hours (PAGING SOUNDS)\Ms. Samantha Felicia L. Alvarez.m4a">
+            </audio>
+            <button id="alvarezButton" type="button" onclick="pageProfessor('alvarez')">Page</button>
+            <!-- Dialog box code -->
+            <div id="alvarezDialogBox" class="dialog-box">
+              <p>You've reached the maximum attempts for this professor.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="ALL DEPARTMENTS PICTURES\SHS Department Consultation Hours (PICTURES)\Marla Ancheta.png">
+          <h4>Marla Ancheta</h4>
+          <p>SHS DEPARTMENT</p>
+          <div class="per">
+            <audio id="anchetaAudio"> 
+              <source src="ALL DEPARTMENTS PAGING SOUNDS\SHS Department Consultation Hours (PAGING SOUNDS)\Paging for Ms. Marla P. Ancheta.m4a">
+            </audio>
+            <button id="anchetaButton" type="button" onclick="pageProfessor('ancheta')">Page</button>
+            <!-- Dialog box code -->
+            <div id="anchetaDialogBox" class="dialog-box">
+              <p>You've reached the maximum attempts for this professor.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="ALL DEPARTMENTS PICTURES\SHS Department Consultation Hours (PICTURES)\Rosellie Banaag.png">
+          <h4>Rosellie Banaag</h4>
+          <p>SHS DEPARTMENT</p>
+          <div class="per">
+            <audio id="banaagAudio"> 
+              <source src="ALL DEPARTMENTS PAGING SOUNDS\SHS Department Consultation Hours (PAGING SOUNDS)\Paging for Ms. Rosellie C. Banaag.m4a">
+            </audio>
+            <button id="banaagButton" type="button" onclick="pageProfessor('banaag')">Page</button>
+            <!-- Dialog box code -->
+            <div id="banaagDialogBox" class="dialog-box">
+              <p>You've reached the maximum attempts for this professor.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="ALL DEPARTMENTS PICTURES\SHS Department Consultation Hours (PICTURES)\Erwin Bermuno.png">
+          <h4>Erwin Bermuno</h4>
+          <p>SHS DEPARTMENT</p>
+          <div class="per">
+            <audio id="bermunoAudio"> 
+              <source src="ALL DEPARTMENTS PAGING SOUNDS\SHS Department Consultation Hours (PAGING SOUNDS)\Paging for Mr. Erwin F. Bermuno.m4a">
+            </audio>
+            <button id="bermunoButton" type="button" onclick="pageProfessor('bermuno')">Page</button>
+            <!-- Dialog box code -->
+            <div id="bermunoDialogBox" class="dialog-box">
+              <p>You've reached the maximum attempts for this professor.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="ALL DEPARTMENTS PICTURES\SHS Department Consultation Hours (PICTURES)\Riza Joy Casta.png">
+          <h4>Riza Joy Casta</h4>
+          <p>SHS DEPARTMENT</p>
+          <div class="per">
+            <audio id="castaAudio"> 
+              <source src="ALL DEPARTMENTS PAGING SOUNDS\SHS Department Consultation Hours (PAGING SOUNDS)\Paging for Ms. Riza Joy M. Casta.m4a">
+            </audio>
+            <button id="castaButton" type="button" onclick="pageProfessor('casta')">Page</button>
+            <!-- Dialog box code -->
+            <div id="castaDialogBox" class="dialog-box">
+              <p>You've reached the maximum attempts for this professor.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="ALL DEPARTMENTS PICTURES\SHS Department Consultation Hours (PICTURES)\Mark Paul Juanay De Guzman.png">
+          <h4>Mark Paul Juanay De Guzman</h4>
+          <p>SHS DEPARTMENT</p>
+          <div class="per">
+            <audio id="deguzmanAudio"> 
+              <source src="ALL DEPARTMENTS PAGING SOUNDS\SHS Department Consultation Hours (PAGING SOUNDS)\Paging for Mr. Mark Paul Juanay De Guzman.m4a">
+            </audio>
+            <button id="deguzmanButton" type="button" onclick="pageProfessor('deguzman')">Page</button>
+            <!-- Dialog box code -->
+            <div id="deguzmanDialogBox" class="dialog-box">
+              <p>You've reached the maximum attempts for this professor.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="ALL DEPARTMENTS PICTURES\SHS Department Consultation Hours (PICTURES)\Ronald Fajardo.png">
+          <h4>Ronald Fajardo</h4>
+          <p>SHS DEPARTMENT</p>
+          <div class="per">
+            <audio id="fajardoAudio"> 
+              <source src="ALL DEPARTMENTS PAGING SOUNDS\SHS Department Consultation Hours (PAGING SOUNDS)\Paging for Mr. Ronald T. Fajardo.m4a">
+            </audio>
+            <button id="fajardoButton" type="button" onclick="pageProfessor('fajardo')">Page</button>
+            <!-- Dialog box code -->
+            <div id="fajardoDialogBox" class="dialog-box">
+              <p>You've reached the maximum attempts for this professor.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+            <img src="ALL DEPARTMENTS PICTURES\SHS Department Consultation Hours (PICTURES)\Kimberly Nicole Flores.png">
+            <h4>Kimberly Nicole Flores</h4>
+            <p>SHS DEPARTMENT</p>
+            <div class="per">
+              <audio id="floresAudio"> 
+                <source src="ALL DEPARTMENTS PAGING SOUNDS\SHS Department Consultation Hours (PAGING SOUNDS)\Paging for Ms. Kimberly Nicole E. Flores.m4a">
+              </audio>
+              <button id="floresButton" type="button" onclick="pageProfessor('flores')">Page</button>
+              <!-- Dialog box code -->
+              <div id="floresDialogBox" class="dialog-box">
+                <p>You've reached the maximum attempts for this professor.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="ALL DEPARTMENTS PICTURES\SHS Department Consultation Hours (PICTURES)\Abigail Mabolo.png">
+            <h4>Abigail Mabolo</h4>
+            <p>SHS DEPARTMENT</p>
+            <div class="per">
+              <audio id="maboloAudio"> 
+                <source src="ALL DEPARTMENTS PAGING SOUNDS\SHS Department Consultation Hours (PAGING SOUNDS)\Paging for Ms. Abigail I. Mabolo.m4a">
+              </audio>
+              <button id="maboloButton" type="button" onclick="pageProfessor('mabolo')">Page</button>
+              <!-- Dialog box code -->
+              <div id="maboloDialogBox" class="dialog-box">
+                <p>You've reached the maximum attempts for this professor.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="ALL DEPARTMENTS PICTURES\SHS Department Consultation Hours (PICTURES)\Louie Macadangdang.png">
+            <h4>Louie Macadangdang</h4>
+            <p>SHS DEPARTMENT</p>
+            <div class="per">
+              <audio id="macadangdangAudio"> 
+                <source src="ALL DEPARTMENTS PAGING SOUNDS\SHS Department Consultation Hours (PAGING SOUNDS)\Paging for Mr. Louie T. Macadangdang.m4a">
+              </audio>
+              <button id="macadangdangButton" type="button" onclick="pageProfessor('macadangdang')">Page</button>
+              <!-- Dialog box code -->
+              <div id="macadangdangDialogBox" class="dialog-box">
+                <p>You've reached the maximum attempts for this professor.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="ALL DEPARTMENTS PICTURES\SHS Department Consultation Hours (PICTURES)\Darwin Mabini Manzanero.png">
+            <h4>Darwin Mabini Manzanero</h4>
+            <p>SHS DEPARTMENT</p>
+            <div class="per">
+              <audio id="manzaneroAudio"> 
+                <source src="ALL DEPARTMENTS PAGING SOUNDS\SHS Department Consultation Hours (PAGING SOUNDS)\Paging for Mr. Darwin Mabini Manzanero.m4a">
+              </audio>
+              <button id="manzaneroButton" type="button" onclick="pageProfessor('manzanero')">Page</button>
+              <!-- Dialog box code -->
+              <div id="manzaneroDialogBox" class="dialog-box">
+                <p>You've reached the maximum attempts for this professor.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="ALL DEPARTMENTS PICTURES\SHS Department Consultation Hours (PICTURES)\John Mark Nadera.png">
+            <h4>John Mark Nadera</h4>
+            <p>SHS DEPARTMENT</p>
+            <div class="per">
+              <audio id="naderaAudio"> 
+                <source src="ALL DEPARTMENTS PAGING SOUNDS\SHS Department Consultation Hours (PAGING SOUNDS)\Paging for Mr. John Mark P. Nadera.m4a">
+              </audio>
+              <button id="naderaButton" type="button" onclick="pageProfessor('nadera')">Page</button>
+              <!-- Dialog box code -->
+              <div id="naderaDialogBox" class="dialog-box">
+                <p>You've reached the maximum attempts for this professor.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="ALL DEPARTMENTS PICTURES\SHS Department Consultation Hours (PICTURES)\Hazel Faye Pastoral.png">
+            <h4>Hazel Faye Pastoral</h4>
+            <p>SHS DEPARTMENT</p>
+            <div class="per">
+              <audio id="pastoralAudio"> 
+                <source src="ALL DEPARTMENTS PAGING SOUNDS\SHS Department Consultation Hours (PAGING SOUNDS)\Paging for Ms. Hazel Faye Pastoral.m4a">
+              </audio>
+              <button id="pastoralButton" type="button" onclick="pageProfessor('pastoral')">Page</button>
+              <!-- Dialog box code -->
+              <div id="pastoralDialogBox" class="dialog-box">
+                <p>You've reached the maximum attempts for this professor.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="ALL DEPARTMENTS PICTURES\SHS Department Consultation Hours (PICTURES)\Marjorie Estaquio Roldan.png">
+            <h4>Marjorie Estaquio Roldan</h4>
+            <p>SHS DEPARTMENT</p>
+            <div class="per">
+              <audio id="roldanAudio"> 
+                <source src="ALL DEPARTMENTS PAGING SOUNDS\SHS Department Consultation Hours (PAGING SOUNDS)\Paging for Ms. Marjorie Estaquio Roldan.m4a">
+              </audio>
+              <button id="roldanButton" type="button" onclick="pageProfessor('roldan')">Page</button>
+              <!-- Dialog box code -->
+              <div id="roldanDialogBox" class="dialog-box">
+                <p>You've reached the maximum attempts for this professor.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="ALL DEPARTMENTS PICTURES\SHS Department Consultation Hours (PICTURES)\Jesebelle Lagahit Salindo.png">
+            <h4>Jesebelle Lagahit Salindo</h4>
+            <p>SHS DEPARTMENT</p>
+            <div class="per">
+              <audio id="salindoAudio"> 
+                <source src="ALL DEPARTMENTS PAGING SOUNDS\SHS Department Consultation Hours (PAGING SOUNDS)\Paging for Ms. Jesebelle Lagahit Salindo.m4a">
+              </audio>
+              <button id="salindoButton" type="button" onclick="pageProfessor('salindo')">Page</button>
+              <!-- Dialog box code -->
+              <div id="salindoDialogBox" class="dialog-box">
+                <p>You've reached the maximum attempts for this professor.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="ALL DEPARTMENTS PICTURES\SHS Department Consultation Hours (PICTURES)\Gabriel Angelo Silao.png">
+            <h4>Gabriel Angelo Silao</h4>
+            <p>SHS DEPARTMENT</p>
+            <div class="per">
+              <audio id="silaoAudio"> 
+                <source src="ALL DEPARTMENTS PAGING SOUNDS\SHS Department Consultation Hours (PAGING SOUNDS)\Paging for Mr. Gabriel Angelo Silao.m4a">
+              </audio>
+              <button id="silaoButton" type="button" onclick="pageProfessor('silao')">Page</button>
+              <!-- Dialog box code -->
+              <div id="silaoDialogBox" class="dialog-box">
+                <p>You've reached the maximum attempts for this professor.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="ALL DEPARTMENTS PICTURES\SHS Department Consultation Hours (PICTURES)\Wilfredo Nagar Uriarte Jr..png">
+            <h4>Wilfredo Nagar Uriarte Jr.</h4>
+            <p>SHS DEPARTMENT</p>
+            <div class="per">
+              <audio id="uriarteAudio"> 
+                <source src="ALL DEPARTMENTS PAGING SOUNDS\SHS Department Consultation Hours (PAGING SOUNDS)\Paging for Mr. Darwin Mabini Manzanero.m4a">
+              </audio>
+              <button id="uriarteButton" type="button" onclick="pageProfessor('uriarte')">Page</button>
+              <!-- Dialog box code -->
+              <div id="uriarteDialogBox" class="dialog-box">
+                <p>You've reached the maximum attempts for this professor.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="ALL DEPARTMENTS PICTURES\SHS Department Consultation Hours (PICTURES)\Kimberly Joyce Morales.png">
+            <h4>Kimberly Joyce Morales</h4>
+            <p>SHS DEPARTMENT</p>
+            <div class="per">
+              <audio id="moralesAudio"> 
+                <source src="ALL DEPARTMENTS PAGING SOUNDS\SHS Department Consultation Hours (PAGING SOUNDS)\Paging for Ms. Kimberly Joyce Morales.m4a">
+              </audio>
+              <button id="moralesButton" type="button" onclick="pageProfessor('morales')">Page</button>
+              <!-- Dialog box code -->
+              <div id="moralesDialogBox" class="dialog-box">
+                <p>You've reached the maximum attempts for this professor.</p>
+              </div>
+            </div>
+          </div>
+
+        
+        <script>
+          var attempts = {}; // Using an object to store attempts for each professor
+          var maxAttempts = 3;
+          var intervalIds = {}; // Using an object to store interval IDs for each professor
+        
+          function playAudio(audioElement) {
+            audioElement.play();
+          }
+        
+          function showDialogBox(dialogBox) {
+            dialogBox.style.display = "block";
+            setTimeout(function() {
+              dialogBox.style.display = "none";
+            }, 3000); // Hide the dialog box after 3 seconds
+          }
+        
+          function pageProfessor(professor) {
+            if (!attempts[professor]) {
+              attempts[professor] = 0;
+            }
+        
+            if (attempts[professor] >= maxAttempts) {
+              clearInterval(intervalIds[professor]);
+              document.getElementById(professor + 'Button').disabled = true;
+              showDialogBox(document.getElementById(professor + 'DialogBox'));
+              return;
+            }
+        
+            var audioElement = document.getElementById(professor + 'Audio');
+            playAudio(audioElement);
+            attempts[professor]++;
+        
+            // Disable the button temporarily and set an interval to enable it again
+            document.getElementById(professor + 'Button').disabled = true;
+            intervalIds[professor] = setInterval(function() {
+              document.getElementById(professor + 'Button').disabled = false;
+              clearInterval(intervalIds[professor]);
+            }, 5000); // Enable button after 5 seconds
+          }
+        </script>
+</tbody>
+</html>
